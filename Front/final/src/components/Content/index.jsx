@@ -26,7 +26,7 @@ const Content = () => {
                     {!show && (
                         <div className="play" onClick={playVideo}>
                             <div className="border">
-                                <i class="fa-solid fa-play"></i>
+                                <i className="fa-solid fa-play"></i>
                             </div>
                         </div>
                     )}
@@ -35,7 +35,7 @@ const Content = () => {
                         <>
                             <iframe width="560" height="315" src="https://www.youtube.com/embed/WY2rTDaPpjI?si=0PfH3q17iSqymc3V" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                             <div className="close" onClick={closeVideo}>
-                                <i class="fa-solid fa-x"></i>
+                                <i className="fa-solid fa-x"></i>
                             </div>
                         </>
                     )}

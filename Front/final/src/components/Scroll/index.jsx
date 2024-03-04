@@ -24,7 +24,7 @@ function Scroll() {
     <div className="top-to-btm" onClick={goToTop}>
       {showTopBtn && (
         <div className="icon-position icon-style">
-          <i class="fa-solid fa-up-long"></i>
+          <i className="fa-solid fa-up-long"></i>
         </div>
       )}
     </div>

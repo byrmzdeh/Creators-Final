@@ -19,13 +19,19 @@ const Navbar = () => {
     const [openSearch, setOpenSearch] = useState(false);
     const { searchQuery, setSearchQuery } = useContext(SearchContext);
 
+    const [showWishlist, setShowWishlist] = useState(false);
+
+    const toggleWishlist = () => {
+        setShowWishlist(!showWishlist);
+    };
+
     const handleSearch = () => {
         setShowSearchResult(!showSearchResult);
     };
 
-    function toggleSearch() {
-        setOpenSearch(!openSearch);
-    }
+    // function toggleSearch() {
+    //     setOpenSearch(!openSearch);
+    // }
 
     function toggleNavbar() {
         setIsOpen(!isOpen)
@@ -104,18 +110,29 @@ const Navbar = () => {
                 </div>
 
 
-                {decode && (decode.role === 'admin' || decode.role === 'user') ?
-                    <div className="icon">
+                <div className="icon">
+                <Link to={'/wishlist'} onClick={toggleWishlist}>
+                    <i className="fa-regular fa-heart"></i>
+                </Link>
+                <Link to={'/basket'}>
+                    <i className="fa-solid fa-basket-shopping"></i>
+                    <sup>{basket.length ? basket.length : ''}</sup>
+                </Link>
+            </div>
 
-                        <Link to={'/wishlist'}><i class="fa-regular fa-heart"></i><sup></sup></Link>
-                        <Link to={'/basket'}><i class="fa-solid fa-basket-shopping"></i><sup>{basket.length ? basket.length : ''}</sup></Link>
-                    </div>
-                    : null
-                }
+            {/* ... (previous code) */}
+
+            {decode && (decode.role === 'admin' || decode.role === 'user') ?
+                <div className={`wishlistPanel ${showWishlist ? "wishlistToggle" : ""}`}>
+                    {/* Render your wishlist content here */}
+                </div>
+                : null
+            }
+
 
                 {decode ?
                     <div className='loginnn'>
-                        <div className="profile"><i class="fa-regular fa-user"></i> <span>Profile</span></div>
+                        <div className="profile"><i className="fa-regular fa-user"></i> <span>Profile</span></div>
                         <div onClick={() => logOut()}><p>Logout</p></div>
                     </div>
                     :
@@ -136,7 +153,7 @@ const Navbar = () => {
                     </div>
                     {decode ?
                         <div className='loginnn'>
-                            <div className="profile"><i class="fa-regular fa-user"></i> Profile</div>
+                            <div className="profile"><i className="fa-regular fa-user"></i> Profile</div>
                             <div onClick={() => logOut()}><p>Logout</p></div>
                         </div>
                         :

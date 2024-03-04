@@ -11,7 +11,7 @@ const WishlistCards = () => {
   return (
     <div className='cardss-shop'>
       {wishlist.map(item => (
-        <div className="card-shop">
+        <div className="card-shop" key={item._id}>
           <img width={400} src={item.image} alt="" />
           {item.image.toLowerCase().endsWith('.mp4') ? (
             <video width={550} src={item.image} autoPlay muted loop></video>
@@ -23,7 +23,7 @@ const WishlistCards = () => {
             <h2 className='next'>{item.discount}</h2>
           </div>
           <div className="button">
-            <button onClick={addBasket(item)} >Add to Cart</button>
+            <button onClick={()=>addBasket(item)} >Add to Cart</button>
             <div className="heart"><i className={` ${checkWishlist(item) ? "fa-solid fa-heart" : " fa-regular fa-heart"}`} onClick={() => addWishlist(item)}></i></div>
           </div>
 

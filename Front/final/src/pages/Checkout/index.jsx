@@ -74,7 +74,7 @@ const Checkout = () => {
     };
 
     const [validation, setValidation] = useState("")
-    const { basket, getTotal } = useContext(BasketContext)
+    const { basket } = useContext(BasketContext)
 
     const checkAllInputs = (inputs) => {
 
@@ -254,7 +254,7 @@ const Checkout = () => {
                     </thead>
                 </table>
                 <div>
-                    <p>Total Price: {getTotal()} $</p>
+                    {/* <p>Total Price: {getTotal()} $</p> */}
                 </div>
                 <button onClick={() => checkAllInputs(inputGroup)}>
                     PLACE ORDER

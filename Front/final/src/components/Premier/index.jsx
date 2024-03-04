@@ -25,8 +25,8 @@ const Premier = () => {
                 <h2 data-aos="fade-left">INFLUENCER MARKETING CONTENT</h2>
                 <p data-aos="fade-left">Maecenas blandit ante elit, eu convallis ligula condimentum ut. Orci varius natoque <br /> penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque ante <br /> tortor, vulputate sit amet arcu</p>
                 <div className='button' data-aos="fade-left">
-                    <button className='brand' ><a href="">I'm a brand </a><i class="fa-solid fa-arrow-right"></i></button>
-                    <button className='creator'><a href="">I'm a creator </a><i class="fa-solid fa-arrow-right"></i></button>
+                    <button className='brand' ><a href="">I'm a brand </a><i className="fa-solid fa-arrow-right"></i></button>
+                    <button className='creator'><a href="">I'm a creator </a><i className="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>
 

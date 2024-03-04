@@ -38,11 +38,7 @@ function BasketProvider({ children }) {
         setBasket(basket.filter((x) => x._id !== item._id))
     }
 
-    function getTotal() {
-        return basket.reduce((amount, x) => x.discount * x.count + amount, 0);
-      }
-
-    const data = { basket, addBasket, increaseCount, decreaseCount, remove , getTotal}
+    const data = { basket, addBasket, increaseCount, decreaseCount, remove }
 
     return (
         <BasketContext.Provider value={data} >

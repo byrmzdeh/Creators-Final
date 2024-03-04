@@ -1,7 +1,7 @@
 import React from 'react'
-import WishlistCards from '../../components/WishlistCards'
-import NewWishlist from '../../components/NewWishlist'
 import { Helmet } from 'react-helmet'
+import NewWishlist from '../../components/NewWishlist'
+import WishlistCards from '../../components/WishlistCards'
 
 const Wishlist = () => {
   return (

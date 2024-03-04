@@ -24,7 +24,7 @@ const Media = () => {
                 <h1 data-aos="fade-left">MEDIA PLAN</h1>
                 <h2 data-aos="fade-left">FOR YOUR MARKETING CAMPAIGNT</h2>
                 <p data-aos="fade-left">Maecenas blandit ante elit, eu convallis ligula condimentum ut. Orci varius natoque <br /> penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque ante <br /> tortor, vulputate sit amet arcu</p>
-                <button data-aos="fade-left" className='brand' ><a href="">Get Free Budget Calculation </a><i class="fa-solid fa-arrow-right"></i></button>
+                <button data-aos="fade-left" className='brand' ><a href="">Get Free Budget Calculation </a><i className="fa-solid fa-arrow-right"></i></button>
             </div>
 
         </div>
