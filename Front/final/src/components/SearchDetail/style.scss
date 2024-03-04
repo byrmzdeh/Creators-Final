@@ -1,0 +1,21 @@
+.shopDetail{
+    max-width: 100%;
+    min-height: 90vh;
+    background-color: white;
+    display: grid;
+    align-items: center;
+    justify-content: space-around;
+    grid-template-columns: auto auto;
+    img{
+        width: 320px;
+        height: 450px;
+    }
+}
+
+
+@media only screen and (min-width: 300px) and (max-width:900px) {
+    .shopDetail{
+        display: grid;
+        grid-template-columns: auto;
+    }
+}
